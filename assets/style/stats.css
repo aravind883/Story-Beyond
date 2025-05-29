@@ -1,0 +1,93 @@
+#statsCard.displayCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#statsCard .heading{
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: #031b0c;
+    font-size: 50px;
+    margin: 40px 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#statsCard .heading:hover{
+    transform: scale(1.05);
+}
+
+#statsCard.displayCard .subtitle{
+    color: #333;
+    font-weight: 400;
+    font-family: "Prompt", sans-serif;
+    margin: 30px;
+}
+
+#statsCard.displayCard .statsSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #031b0c;
+    font-family: 'Prompt', sans-serif;
+    color: #fff;
+    width: 80vw;
+    max-width: 1000px;
+    border-radius: 60px;
+    margin: auto;
+}
+
+#statsCard.displayCard .statBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 50px;
+}
+
+#statsCard.displayCard .statNumber {
+    font-size: 50px;
+    font-weight: 500;
+    color: #d4b815;
+    margin-bottom: 8px;
+    font-family: "Lexend", sans-serif;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+#statsCard.displayCard .statBlock:hover .statNumber {
+    transform: scale(1.15);
+}
+
+#statsCard.displayCard .statLabel {
+    font-size: 16px;
+    cursor: default;
+}
+
+#statsCard.displayCard .statDivider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    #statsCard.displayCard .statsSection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #statsCard.displayCard.statDivider {
+        width: 60%;
+        height: 1px;
+    }
+}
+
+#statsCard.displayCard .caption{
+    font-family: "Lexend", sans-serif;
+    font-size: 25px;
+    margin : 20px;
+    margin-top: 40px;
+    width : 75vw;
+    text-align: center;
+}

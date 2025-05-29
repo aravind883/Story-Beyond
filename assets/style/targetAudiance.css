@@ -1,0 +1,16 @@
+#targetAudienceCard{
+    align-items: center;
+    justify-content: center;
+}
+
+#targetAudienceCard .audienceList {
+    list-style: none;
+}
+
+#targetAudienceCard .audienceList li{
+    margin : 6px;
+}
+
+#targetAudienceCard .cardSubheading{
+    margin : 40px
+}

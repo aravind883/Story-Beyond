@@ -1,0 +1,231 @@
+/* === Global Reset & Font === */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    color: #ffffff;
+    background-color: #0f0f0f;
+}
+
+.displayCard {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.cardHeading {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Lexend', sans-serif;
+    color: #f1f1f1;
+}
+
+.cardSubheading {
+    font-size: 1.4em;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === targetAudienceCard === */
+#targetAudienceCard {
+    background: linear-gradient(135deg, #031b0c, #020704);
+}
+
+.audienceList li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === offerCards === */
+#offerCards {
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.offerCard {
+    margin-bottom: 40px;
+    background-color: #031b0c;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.offerTitle {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Lexend', sans-serif;
+    color: #d4b815;
+}
+
+.offerDescription {
+    font-size: 1.1em;
+    color: #ccc;
+    font-family: 'Lexend', sans-serif;
+}
+
+.processFlow {
+    font-size: 0.95em;
+    color: #aaa;
+    margin-top: 10px;
+    font-style: italic;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* === brandTrustCard === */
+#brandTrustCard {
+    background: linear-gradient(145deg, #031b0c, #020704);
+}
+
+.cardBlocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cardBlock {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.cardBlock:hover {
+    transform: translateY(-5px);
+}
+
+.blockTitle {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d4b815;
+    font-family: 'Lexend', sans-serif;
+}
+
+.blockDescription {
+    font-size: 1em;
+    color: #ccc;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === growthEngineCard === */
+#growthEngineCard {
+    background: linear-gradient(to right, #020704, #031b0c);
+}
+
+.growthSteps li {
+    margin-bottom: 20px;
+}
+
+.stepTitle {
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Lexend', sans-serif;
+    color: #d4b815;
+}
+
+.stepDescription {
+    font-size: 1em;
+    color: #ccc;
+    margin-top: 5px;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === pricingCard === */
+#pricingCard {
+    background: linear-gradient(to right, #031b0c, #020704);
+}
+
+.pricingPlans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.pricingPlan {
+    flex: 1;
+    background-color: #1c1c1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.planTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Lexend', sans-serif;
+    color: #f1f1f1;
+}
+
+.planTagline {
+    font-size: 1em;
+    font-style: italic;
+    color: #bbb;
+    margin-bottom: 20px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.idealFor {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #9fa1ff;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === aboutCard === */
+#aboutCard {
+    background: linear-gradient(135deg, #020704, #031b0c);
+}
+
+.aboutDescription {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* === faqCard === */
+#faqCard {
+    background: linear-gradient(to bottom, #020704, #031b0c);
+}
+
+.faqList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.faqList li {
+    margin-bottom: 20px;
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.faqList li:hover {
+    transform: translateY(-5px);
+}
+
+.faqList li strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+}
+
+.faqList li div {
+    color: #ccc;
+    font-size: 1em;
+    font-family: 'Lexend', sans-serif;
+}

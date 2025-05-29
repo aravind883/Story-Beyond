@@ -1,0 +1,72 @@
+body {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background-color: #020704;
+}
+
+body.loaded {
+    visibility: visible;
+    transition: visibility 0s ease-in;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #031b0c;
+    position: fixed;
+    width: calc(100% - 60px);
+    top: 0;
+    z-index: 10;
+    max-height: 15vh;
+    height: 27px;
+    transition: top 0.3s ease;
+}
+
+.navbar.hidden {
+    top: -100px;
+  }
+
+.navbar .logo img {
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    transition: 300ms ease;
+}
+
+.navbar .logo img:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    filter: drop-shadow(0.35rem 0.35rem 0.6rem rgba(0, 0, 0, 0.5));
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+    margin: 7px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #f0d000;
+    transform: scale(1.15);
+}
