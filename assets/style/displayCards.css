@@ -1,5 +1,5 @@
 .snapContainer {
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
@@ -19,6 +19,8 @@
     display: flex;
     position: relative;
     padding-top: 87px;
+    justify-content: center;
+    align-items: center;
 }
 
 .snapContainer .displayCard:nth-child(odd) {
@@ -179,4 +181,18 @@
     font-size: 70px;
     font-weight: 800;
     padding-right: 20px;
+}
+
+
+/* Styles for elements before they are visible */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(50px); /* Start 50px below its natural position */
+    transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transition */
+}
+
+/* Animation for when the element becomes visible */
+.fade-in-raise-up {
+    opacity: 1;
+    transform: translateY(0); /* Move to its natural position */
 }

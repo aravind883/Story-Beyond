@@ -1,0 +1,117 @@
+/* faqCard as a flex item within .displayCard */
+.faqCard {
+    /* flex item properties */
+    flex: 1;
+    /* align-self: stretch; */
+    /* min-width: 0; */
+
+    /* --- Styles for the card's internal layout and appearance --- */
+    width: 100%;
+    max-width: 900px; /* Limits width for better readability of text */
+    margin: 60px auto; /* Centers it within its flex space, adds vertical margin */
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Dark background, consistent with other cards */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #f5f5f5; /* Light text color for the whole section */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    text-align: center; /* Center the heading and potentially list if it's narrow */
+}
+
+.faqCard .cardHeading {
+    font-size: 3.8em; /* Large, prominent heading */
+    font-weight: 700;
+    margin-bottom: 50px; /* More space below heading */
+    color: #ffffff; /* Pure white for heading */
+    line-height: 1.3;
+    background: linear-gradient(180deg, #8e7a07, #fbcd12, #c6b348);
+    background-clip: text;
+}
+
+.faqCard .faqList {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column;
+    gap: 20px; /* Space between each FAQ item */
+    text-align: left; /* Align text within FAQ items to the left */
+}
+
+.faqCard .faqList li {
+    background-color: #333; /* Darker gray background for each FAQ item (light foreground) */
+    border-radius: 8px; /* Rounded corners for FAQ items */
+    padding: 25px;
+    filter: drop-shadow(0px 0px 50px #4242423e);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease;
+}
+
+.faqCard .faqList li:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    cursor: default;
+    filter: drop-shadow(0px 0px 50px #7872723e);
+    transform: scale(1.1);
+}
+
+.faqCard .faqList li strong {
+    display: block; /* Makes the question take full width */
+    font-size: 1.25em; /* Larger font for the question */
+    font-weight: 500;
+    color: #fff; /* Light gray for the question */
+    margin-bottom: 10px; /* Space between question and answer */
+    font-family: "Lexend", sans-serif;
+}
+
+.faqCard .faqList li strong i{
+    font-weight: 600;
+    color: #fbcd12;
+}
+
+.faqCard .faqList li strong span.emoji{
+    line-height: 1; /* Ensures emoji aligns well with text */
+}
+
+.faqCard .faqList li div { /* This targets the answer div */
+    font-size: 1.05em; /* Slightly larger text for answers */
+    color: #ddd; /* Lighter gray for the answer text */
+    line-height: 1.7; /* Good line height for readability */
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    transition: 300ms ease-in-out; /* Smooth transition for hover effects */
+}
+
+.faqCard .faqList li:hover div {
+    color: #eee;
+}
+
+/* Responsive adjustments for faqCard */
+@media (max-width: 768px) {
+    .faqCard {
+        padding: 30px 20px; /* Reduce padding on smaller screens */
+        margin: 40px auto; /* Adjust vertical margin */
+    }
+
+    .faqCard .cardHeading {
+        font-size: 2.2em; /* Adjust heading size */
+        margin-bottom: 30px;
+    }
+
+    .faqCard .faqList li {
+        padding: 20px; /* Reduce padding for list items */
+    }
+
+    .faqCard .faqList li strong {
+        font-size: 1.1em;
+    }
+
+    .faqCard .faqList li div {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faqCard .cardHeading {
+        font-size: 1.8em;
+    }
+}

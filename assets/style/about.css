@@ -1,0 +1,44 @@
+/* aboutCard as a flex item within .displayCard */
+.aboutCard {
+    /* flex item properties */
+    flex: 1;
+    /* align-self: stretch; */
+    /* min-width: 0; */
+
+    /* --- Styles for the card's internal layout and appearance --- */
+    width: 100%;
+    margin: 60px auto; /* Centers it within its flex space, adds vertical margin */
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #f8f8f8; /* Changed to LIGHT background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow for light background */
+    color: #333; /* Changed to DARK text color for the whole section */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    text-align: center; /* Center all text content within the card */
+}
+
+.aboutCard .cardHeading {
+    font-size: 2.5em; /* Large, prominent heading */
+    margin-bottom: 30px;
+    color: #222; /* Changed to DARK heading color */
+    text-shadow: none; /* Remove text shadow as it's for dark background */
+    line-height: 1.3; /* Improve readability for multi-line headings */
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.aboutCard .aboutDescription,
+.aboutCard > div:last-child { /* Target the two description paragraphs */
+    font-size: 1.15em; /* Slightly larger text for readability */
+    line-height: 1.8; /* Good line height for readability */
+    margin-bottom: 20px; /* Space between paragraphs */
+    padding: 0 20px; /* Add some horizontal padding to prevent text from hitting edges */
+    font-family: "Lexend", sans-serif;
+    color : #392207;
+}
+
+.aboutCard > div:last-child {
+    margin-bottom: 0; /* No bottom margin for the last paragraph */
+}
+
+
+/* Responsive adjustments for aboutCard */

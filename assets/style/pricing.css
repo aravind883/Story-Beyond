@@ -1,0 +1,187 @@
+/* pricingCard as a flex item within .displayCard */
+.pricingCard {
+    /* flex item properties */
+    flex: 1;
+    /* align-self: stretch; */
+    /* min-width: 0; */
+
+    /* --- Original styles for the card's internal layout --- */
+    width: 100%;
+    margin: 60px auto; /* Still centers within its assigned flex space if width < 100% */
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Dark background */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #f5f5f5; /* Light text color for the whole section */
+    font-family: 'Roboto', sans-serif;
+}
+
+.pricingCard .cardHeading {
+    font-size: 2.8em;
+    text-align: center;
+    display: block;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.pricingCard .pricingPlans {
+    display: grid; /* This is correct for the internal layout of the pricing plans */
+    gap: 30px;
+    grid-template-columns: 1fr; /* Default for mobile: 1 column */
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pricingCard .pricingPlan {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex; /* Already good for internal stacking */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+    position: relative;
+}
+
+.pricingCard .pricingPlan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    background-color: #444;
+}
+
+.pricingCard .pricingPlan.featuredPlan {
+    background-color: #007bff;
+    border-color: #0056b3;
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.pricingCard .pricingPlan.featuredPlan .planTitle,
+.pricingCard .pricingPlan.featuredPlan .planTagline,
+.pricingCard .pricingPlan.featuredPlan .idealFor,
+.pricingCard .pricingPlan.featuredPlan .featuresList li {
+    color: #ffffff;
+}
+
+.pricingCard .planTitle {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #e0e0e0;
+    font-family: "Lexend", sans-serif;
+}
+
+
+.pricingCard .planSubTitle {
+    margin: 20px;
+    font-size: 1.1em;
+    font-family: "Lexend", sans-serif;
+}
+
+.pricingCard .planSubTitle .emoji{
+    margin : 0 5px;
+}
+
+.pricingCard .planTagline {
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 25px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.pricingCard .featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.pricingCard .featuresList li {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.pricingCard .featuresList li span {
+    color: #28a745;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.pricingCard .idealFor {
+    font-size: 0.95em;
+    color: #aaa;
+    margin-top: auto;
+    margin-bottom: 25px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.pricingCard .callToAction {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.pricingCard .callToAction:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .pricingCard .pricingPlans {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricingCard .pricingPlans {
+        /* This will depend on how many plans you have and if you want them to fit 3 or 2 across */
+        /* If 2 plans and you want them grouped/centered */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 800px;
+        margin: 0 auto;
+        /* If 3 plans and you want them to fill the space */
+        /* grid-template-columns: repeat(3, 1fr); */
+    }
+}
+
+@media (max-width: 480px) {
+    .pricingCard .cardHeading {
+        font-size: 2em;
+    }
+
+    .pricingCard .planTitle {
+        font-size: 1.5em;
+    }
+
+    .pricingCard .planTagline {
+        font-size: 1em;
+    }
+
+    .pricingCard .pricingPlan {
+        padding: 20px;
+    }
+}

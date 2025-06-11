@@ -1,0 +1,90 @@
+.brandTrustCard {
+    width: 100%; /* Ensures the card container takes full width */
+    max-width: 1200px; /* Optional: Set a max-width for better readability on large screens */
+    margin: 0 auto; /* Centers the card container */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.brandTrustCard .cardHeading {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.brandTrustCard .cardBlocks {
+    display: grid;
+    gap: 35px; /* Space between cards */
+    /* Default for mobile (1 card per line) */
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+}
+
+.brandTrustCard .cardBlock {
+    padding: 20px;
+    min-height: 150px; /* Minimum height as requested */
+    min-width: 60px; /* Minimum width as requested */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #333; /* Darker gray background for each FAQ item (light foreground) */
+    border-radius: 8px; /* Rounded corners for FAQ items */
+    padding: 25px;
+    filter: drop-shadow(0px 0px 50px #4242423e);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease;
+    cursor: default;
+}
+
+.brandTrustCard .cardBlock:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brandTrustCard .blockTitle {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #fff; /* Light gray for the question */
+    display: flex; /* Allows icon and text to sit side-by-side */
+    align-items: center; /* Vertically aligns icon and text */
+    font-family: "Lexend", sans-serif;
+}
+
+.brandTrustCard .blockTitle .emoji{
+    margin : 10px;
+    font-size: 30px;
+}
+/* --- CSS for Icons --- */
+.brandTrustCard .blockTitle .icon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.5em; /* Make icons slightly larger than text */
+    color: #007bff; /* A primary color for icons */
+    /* You can add more styling here, e.g., text-shadow, opacity */
+}
+
+.brandTrustCard .blockDescription {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ddd; /* Lighter gray for the answer text */
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+
+/* Tablet View: 2 cards per line */
+@media (min-width: 768px) {
+    .brandTrustCard .cardBlocks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop/Desktop View: 3 cards per line */
+@media (min-width: 1024px) {
+    .brandTrustCard .cardBlocks {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,114 @@
+/* growthEngineCard as a flex item within .displayCard (assuming .displayCard is display:flex) */
+.growthEngineCard {
+    flex: 1; /* Allows this card to grow and shrink within its flex parent */
+    /* align-self: stretch; */
+    /* min-width: 0; */
+
+    width: 100%;
+    max-width: 1200px; /* Consistent max-width with brandTrustCard */
+    margin: 60px auto; /* Centers the card container, adds vertical margin */
+    padding: 40px; /* Overall padding for the section */
+    box-sizing: border-box;
+    background-color: #020704 !important; /* Dark background, consistent with other dark sections */
+    border-radius: 12px; /* Consistent border-radius with other dark sections */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Consistent shadow with other dark sections */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.growthEngineCard .cardHeading {
+    font-size: 3em; /* Larger heading, consistent with brandTrustCard */
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted margin */
+    color: #ffffff; /* White heading, consistent with brandTrustCard */
+    font-family: "Be Vietnam Pro", sans-serif; /* Consistent font */
+
+    
+}
+
+.growthEngineCard .cardSubheading {
+    font-size: 1.3em;
+    text-align: center;
+    color: #ccc; /* Lighter gray subheading, consistent with light foreground on dark background */
+    margin-bottom: 40px; /* Space before the steps grid */
+    line-height: 1.5;
+}
+
+.growthEngineCard .growthSteps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* Use grid for the steps themselves */
+    gap: 35px; /* Consistent gap with brandTrustCard */
+    grid-template-columns: 1fr; /* Default for mobile: 1 column */
+}
+
+.growthEngineCard .growthSteps li {
+    background-color: #333; /* Darker gray background for each step item (light foreground) */
+    color: #f0f0f0; /* Light text color for steps */
+    border-radius: 8px;
+    padding: 25px; /* Consistent padding with brandTrustCard */
+    /* Removed fixed width and margin as grid will handle sizing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* Subtle shadow for items */
+    filter: drop-shadow(0px 0px 50px #4242423e); /* Consistent drop shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
+    min-height: 150px; /* Ensure consistent height for cards */
+    display: flex; /* Allow internal content to be flex for vertical alignment */
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.growthEngineCard .growthSteps li:hover {
+    transform: scale(1.05); /* Consistent hover effect with brandTrustCard */
+    filter: drop-shadow(0px 0px 60px #5a5a5a5e); /* Consistent hover shadow */
+}
+
+.growthEngineCard .stepTitle {
+    font-size: 1.25em; /* Consistent with brandTrustCard blockTitle */
+    font-weight: 500; /* Consistent with brandTrustCard blockTitle */
+    margin-bottom: 10px; /* Consistent with brandTrustCard blockTitle */
+    color: #fff; /* White title, consistent */
+    font-family: "Lexend", sans-serif; /* Consistent font */
+    display: flex; /* For emoji alignment */
+    align-items: center;
+}
+
+.growthEngineCard .stepTitle .emoji {
+    margin-right: 10px; /* Consistent emoji margin */
+    font-size: 30px; /* Consistent emoji size */
+}
+
+/* Removed the .growthEngineCard .stepTitle .icon rule as you are now using .emoji */
+/* .growthEngineCard .stepTitle .icon {
+    margin-right: 12px;
+    font-size: 1.6em;
+    color: #e8dede;
+    flex-shrink: 0;
+} */
+
+.growthEngineCard .stepDescription {
+    font-size: 1em;
+    color: #ddd; /* Light gray description, consistent */
+    line-height: 1.5; /* Consistent line-height */
+    font-family: 'Prompt', sans-serif; /* Consistent font */
+    font-weight: 300;
+}
+
+/* --- Responsive adjustments for growthEngineCard --- */
+
+/* Tablet View: 2 cards per line */
+@media (min-width: 768px) {
+    .growthEngineCard .growthSteps {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per line */
+    }
+}
+
+/* Laptop/Desktop View: 3 cards per line */
+@media (min-width: 1024px) {
+    .growthEngineCard .growthSteps {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per line */
+    }
+}
+
+/* Further adjustment for very large screens - no specific need for minmax on growth-header-and-steps-container anymore */
+/* You might want to adjust .growthEngineCard max-width if needed for extra large screens */
