@@ -4,7 +4,6 @@ body {
     padding: 0;
     overflow: hidden;
     height: 100vh;
-    /* scroll-snap-type: y mandatory; */
     scroll-behavior: smooth;
     background-color: #020704;
     cursor: default;
@@ -28,6 +27,10 @@ body.loaded {
     max-height: 15vh;
     height: 27px;
     transition: top 0.3s ease;
+}
+
+.navbar .menuButton{
+    display: none;
 }
 
 .navbar.hidden {
@@ -70,4 +73,39 @@ body.loaded {
 .navbar .nav-links li a:hover {
     color: #f0d000;
     transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+    .navbar .menuButton {
+        background-color: #00000000;
+        border: none;
+        color: #eee;
+        font-size: 24px;
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: block;
+        height: fit-content;
+        background-color: #031b0c;
+        padding: 10px;
+        position: absolute;
+        top: -260px;
+        left: 0;
+        width: 100%;
+        margin-top: 20px;
+        transition: 300ms;
+    }
+
+    .navbar .nav-links.active {
+        top: 60px;
+    }
+
+    .navbar .logo img {
+        height: 55px;
+    }
 }

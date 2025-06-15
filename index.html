@@ -19,6 +19,8 @@
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+
+    <link rel="stylesheet" href="./assets/style/particles.css">
     <link rel="stylesheet" href="./assets/style/index.css">
     <link rel="stylesheet" href="./assets/style/stats.css">
     <link rel="stylesheet" href="./assets/style/targetAudiance.css">
@@ -31,27 +33,33 @@
     <link rel="stylesheet" href="./assets/style/faq.css">
     <!-- <link rel="stylesheet" href="/assets/style/temporaryStyles.css"> -->
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/794ec7c868.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script>
+
 </head>
 
 <body>
-
     <nav class="navbar hidden">
         <div class="logo">
             <img src="./assets/images/logo_white.png" alt="StoryBeyond Logo">
         </div>
+        <button class="menuButton" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <ul class="nav-links">
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#indexCard">Home</a></li>
+            <li><a href="#targetAudienceCard">Strategy</a></li>
+            <li><a href="#pricingCard">Pricing</a></li>
+            <li><a href="#faqCard">FAQs</a></li>
         </ul>
     </nav>
 
+    <div id="tsparticles"></div>
+    <div id="tsoverlay"></div>
     <div class="snapContainer">
         <div id="indexCard" class="displayCard">
-            <div class="backgroundOverlay"></div>
-            <div class="grainsOverlay"></div>
-            <div class="tintOverlay"></div>
             <div class="center content">
                 <div class="title">Welcome to</div>
                 <div class="heading riseUp">StoryBeyond</div>
@@ -98,7 +106,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="targetAudienceCard" class="displayCard targetAudienceCard">
             <div>
@@ -215,14 +222,14 @@
                 </div>
                 <div class="growth-header-and-steps-container">
                     <ol class="growthSteps">
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">🎯</span> Vision-Driven Strategy
                             </div>
                             <div class="stepDescription">We map out a custom strategy for your goals — combining your vision
                                 with proven growth systems.</div>
                         </li>
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">📍</span> Smart Market Positioning
                             </div>
@@ -230,21 +237,21 @@
                                 never
                                 blend in.</div>
                         </li>
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">👥</span> Magnetic Storytelling On Camera
                             </div>
                             <div class="stepDescription">We script and shoot your videos to match your voice and story — you
                                 just show up.</div>
                         </li>
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">✂️</span> Editing That Captures Attention
                             </div>
                             <div class="stepDescription">We maximize watch time and engagement through data-informed editing
                                 techniques.</div>
                         </li>
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">📈</span>  Continuous Growth Tracking
                             </div>
@@ -252,7 +259,7 @@
                                 to
                                 chance.</div>
                         </li>
-                        <li>
+                        <li class="hidden-element">
                             <div class="stepTitle">
                                 <span class="emoji">🚀</span> Consistent Posting and Smart Funnels
                             </div>
@@ -268,7 +275,7 @@
             <div>
                 <div class="cardHeading">Clear Pricing. Powerful Results.</div>
                 <div class="pricingPlans">
-                    <div class="pricingPlan">
+                    <div class="pricingPlan hidden-element">
                         <div class="planTitle">Authority Launch</div>
                         <div class="planSubTitle"><span class="emoji">📅</span> 1 Month Package</div>
                         <div class="planTagline">A fast-track to building momentum and credibility.</div>
@@ -282,7 +289,7 @@
                         <div class="idealFor">Perfect for early-stage personal brands.</div>
                         <!-- <button class="callToAction">Get Started</button> -->
                     </div>
-                    <div class="pricingPlan">
+                    <div class="pricingPlan hidden-element">
                         <div class="planTitle">Authority Domination</div>
                         <div class="planSubTitle"><span class="emoji">📅</span> 3 Months Package</div>
                         <div class="planTagline">From visible to unforgettable — your brand transformation starts here.
@@ -354,8 +361,6 @@
         </div>
 
     </div>
-
-
     <script src="./assets/script/index.js"></script>
 </body>
 

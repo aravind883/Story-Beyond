@@ -5,21 +5,20 @@
     /* min-width: 0; */
 
     width: 100%;
-    max-width: 1200px; /* Consistent max-width with brandTrustCard */
+    max-width: 1200px; /* Consistent max-width with growthEngineCard */
     margin: 60px auto; /* Centers the card container, adds vertical margin */
     padding: 40px; /* Overall padding for the section */
     box-sizing: border-box;
-    background-color: #020704 !important; /* Dark background, consistent with other dark sections */
+    background-color: #02070400 !important; /* Dark background, consistent with other dark sections */
     border-radius: 12px; /* Consistent border-radius with other dark sections */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Consistent shadow with other dark sections */
     font-family: 'Roboto', sans-serif; /* Consistent font */
 }
 
 .growthEngineCard .cardHeading {
-    font-size: 3em; /* Larger heading, consistent with brandTrustCard */
+    font-size: 3em; /* Larger heading, consistent with growthEngineCard */
     text-align: center;
     margin-bottom: 20px; /* Adjusted margin */
-    color: #ffffff; /* White heading, consistent with brandTrustCard */
+    color: #ffffff; /* White heading, consistent with growthEngineCard */
     font-family: "Be Vietnam Pro", sans-serif; /* Consistent font */
 
     
@@ -38,7 +37,7 @@
     padding: 0;
     margin: 0;
     display: grid; /* Use grid for the steps themselves */
-    gap: 35px; /* Consistent gap with brandTrustCard */
+    gap: 35px; /* Consistent gap with growthEngineCard */
     grid-template-columns: 1fr; /* Default for mobile: 1 column */
 }
 
@@ -46,10 +45,9 @@
     background-color: #333; /* Darker gray background for each step item (light foreground) */
     color: #f0f0f0; /* Light text color for steps */
     border-radius: 8px;
-    padding: 25px; /* Consistent padding with brandTrustCard */
+    padding: 25px; /* Consistent padding with growthEngineCard */
     /* Removed fixed width and margin as grid will handle sizing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* Subtle shadow for items */
-    filter: drop-shadow(0px 0px 50px #4242423e); /* Consistent drop shadow */
+    box-shadow: 0 0px 35px #33333333;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     box-sizing: border-box;
     min-height: 150px; /* Ensure consistent height for cards */
@@ -59,14 +57,14 @@
 }
 
 .growthEngineCard .growthSteps li:hover {
-    transform: scale(1.05); /* Consistent hover effect with brandTrustCard */
-    filter: drop-shadow(0px 0px 60px #5a5a5a5e); /* Consistent hover shadow */
+    transform: scale(1.05); /* Consistent hover effect with growthEngineCard */
+    box-shadow: 0 0px 35px #7b7b7b33;
 }
 
 .growthEngineCard .stepTitle {
-    font-size: 1.25em; /* Consistent with brandTrustCard blockTitle */
-    font-weight: 500; /* Consistent with brandTrustCard blockTitle */
-    margin-bottom: 10px; /* Consistent with brandTrustCard blockTitle */
+    font-size: 1.25em; /* Consistent with growthEngineCard blockTitle */
+    font-weight: 500; /* Consistent with growthEngineCard blockTitle */
+    margin-bottom: 10px; /* Consistent with growthEngineCard blockTitle */
     color: #fff; /* White title, consistent */
     font-family: "Lexend", sans-serif; /* Consistent font */
     display: flex; /* For emoji alignment */
@@ -110,5 +108,60 @@
     }
 }
 
-/* Further adjustment for very large screens - no specific need for minmax on growth-header-and-steps-container anymore */
-/* You might want to adjust .growthEngineCard max-width if needed for extra large screens */
+@media (min-width: 475px) and (max-width: 600px) {
+    .growthEngineCard .heading {
+        font-size: 60px;
+    }
+
+    .growthEngineCard .subtitle {
+        font-size: 24px;
+    }
+
+    .growthEngineCard .captions {
+        font-size: 16px;
+    }
+
+    .growthEngineCard .buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .growthEngineCard .cardHeading {
+        font-size: 30px;
+    }
+
+    .growthEngineCard .emboseText {
+        font-size: 40px;
+    }
+}
+
+@media  (max-width: 475px) {
+    .growthEngineCard .heading {
+        font-size: 50px;
+    }
+
+    .growthEngineCard .subtitle {
+        font-size: 20px;
+    }
+
+    .growthEngineCard .captions {
+        font-size: 14px;
+    }
+
+    .growthEngineCard .captions div{
+        margin : 25px;
+    }
+
+    .growthEngineCard .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .growthEngineCard .cardHeading {
+        font-size: 25px;
+    }
+
+    .growthEngineCard .emboseText {
+        font-size: 30px;
+    }
+}

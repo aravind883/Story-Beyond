@@ -91,3 +91,32 @@
     margin-top: 40px;
     text-align: justify;
 }
+
+@media (max-width: 1280px) {
+    .cards{
+        display: block;
+    }
+
+    #offerCards .card {
+        margin: 20px auto;
+        width: 70%;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    #offerCards .card .cardTitle{
+        margin: 10px;
+    }
+
+    #offerCards .card .cardDescription{
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    #offerCards .card .processFlow {
+        width: calc(100% - 40px);
+        padding: 20px;
+
+        margin-top: 10px;
+    }
+}

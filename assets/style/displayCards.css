@@ -3,6 +3,8 @@
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
+    position: relative;
+    z-index: 2;
 }
 
 .snapContainer::-webkit-scrollbar {
@@ -24,7 +26,6 @@
 }
 
 .snapContainer .displayCard:nth-child(odd) {
-    background-color: #020704;
     color: #f1f1f1;
 }
   
@@ -44,15 +45,11 @@
 }
 
 .displayCard .backgroundOverlay{
-    background-image: url(../images/background2.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
 }
 
 .displayCard .tintOverlay{
@@ -77,8 +74,8 @@
     opacity: 0;
     transform: translateY(35px);
     animation: riseUp 3s ease-out forwards;
-  }
-  
+}
+
 @keyframes riseUp {
     to {
       opacity: 1;
@@ -97,6 +94,7 @@
 
 .displayCard .heading{
     font-size: 100px;
+    margin: 0 20px;
     color: #d4b815;
     font-family: "Caveat", cursive;
     font-weight: 500;
@@ -187,12 +185,70 @@
 /* Styles for elements before they are visible */
 .hidden-element {
     opacity: 0;
-    transform: translateY(50px); /* Start 50px below its natural position */
-    transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transition */
+    transform: translateY(150px); /* Start 50px below its natural position */
+    transition: 30000ms; /* Smooth transition */
 }
 
 /* Animation for when the element becomes visible */
-.fade-in-raise-up {
+.hidden-element.fade-in-raise-up {
     opacity: 1;
     transform: translateY(0); /* Move to its natural position */
+}
+
+@media (min-width: 475px) and (max-width: 600px) {
+    .displayCard .heading {
+        font-size: 60px;
+    }
+
+    .displayCard .subtitle {
+        font-size: 24px;
+    }
+
+    .displayCard .captions {
+        font-size: 16px;
+    }
+
+    .displayCard .buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .displayCard .cardHeading {
+        font-size: 30px;
+    }
+
+    .displayCard .emboseText {
+        font-size: 40px;
+    }
+}
+
+@media  (max-width: 475px) {
+    .displayCard .heading {
+        font-size: 50px;
+    }
+
+    .displayCard .subtitle {
+        font-size: 20px;
+    }
+
+    .displayCard .captions {
+        font-size: 14px;
+    }
+
+    .displayCard .captions div{
+        margin : 25px;
+    }
+
+    .displayCard .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .displayCard .cardHeading {
+        font-size: 25px;
+    }
+
+    .displayCard .emboseText {
+        font-size: 30px;
+    }
 }

@@ -8,9 +8,14 @@
 }
 
 #targetAudienceCard .audienceList li{
-    margin : 6px;
+    margin : 18px;
 }
 
 #targetAudienceCard .cardSubheading{
     margin : 40px
+}
+
+
+#targetAudienceCard.displayCard .captions {
+    padding: 0;
 }

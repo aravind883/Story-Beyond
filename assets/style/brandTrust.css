@@ -33,14 +33,14 @@
     background-color: #333; /* Darker gray background for each FAQ item (light foreground) */
     border-radius: 8px; /* Rounded corners for FAQ items */
     padding: 25px;
-    filter: drop-shadow(0px 0px 50px #4242423e);
+    box-shadow: 0 0px 35px #33333333;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease;
     cursor: default;
 }
 
 .brandTrustCard .cardBlock:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Consistent hover effect with brandTrustCard */
+    box-shadow: 0 0px 35px #7b7b7b33;
 }
 
 .brandTrustCard .blockTitle {
@@ -86,5 +86,63 @@
 @media (min-width: 1024px) {
     .brandTrustCard .cardBlocks {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 475px) and (max-width: 600px) {
+    .brandTrustCard .heading {
+        font-size: 60px;
+    }
+
+    .brandTrustCard .subtitle {
+        font-size: 24px;
+    }
+
+    .brandTrustCard .captions {
+        font-size: 16px;
+    }
+
+    .brandTrustCard .buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .brandTrustCard .cardHeading {
+        font-size: 30px;
+    }
+
+    .brandTrustCard .emboseText {
+        font-size: 40px;
+    }
+}
+
+@media  (max-width: 475px) {
+    .brandTrustCard .heading {
+        font-size: 50px;
+    }
+
+    .brandTrustCard .subtitle {
+        font-size: 20px;
+    }
+
+    .brandTrustCard .captions {
+        font-size: 14px;
+    }
+
+    .brandTrustCard .captions div{
+        margin : 25px;
+    }
+
+    .brandTrustCard .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .brandTrustCard .cardHeading {
+        font-size: 25px;
+    }
+
+    .brandTrustCard .emboseText {
+        font-size: 30px;
     }
 }

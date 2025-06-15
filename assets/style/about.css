@@ -40,5 +40,60 @@
     margin-bottom: 0; /* No bottom margin for the last paragraph */
 }
 
+@media (min-width: 475px) and (max-width: 600px) {
+    .aboutCard .heading {
+        font-size: 60px;
+    }
 
-/* Responsive adjustments for aboutCard */
+    .aboutCard .subtitle {
+        font-size: 24px;
+    }
+
+    .aboutCard .captions {
+        font-size: 16px;
+    }
+
+    .aboutCard .buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .aboutCard .cardHeading {
+        font-size: 30px;
+    }
+
+    .aboutCard .emboseText {
+        font-size: 40px;
+    }
+}
+
+@media  (max-width: 475px) {
+    .aboutCard .heading {
+        font-size: 50px;
+    }
+
+    .aboutCard .subtitle {
+        font-size: 20px;
+    }
+
+    .aboutCard .captions {
+        font-size: 14px;
+    }
+
+    .aboutCard .captions div{
+        margin : 25px;
+    }
+
+    .aboutCard .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .aboutCard .cardHeading {
+        font-size: 25px;
+    }
+
+    .aboutCard .emboseText {
+        font-size: 30px;
+    }
+}

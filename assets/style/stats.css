@@ -86,8 +86,53 @@
 #statsCard.displayCard .caption{
     font-family: "Lexend", sans-serif;
     font-size: 25px;
-    margin : 20px;
+    margin: 30px auto;
     margin-top: 40px;
     width : 75vw;
     text-align: center;
+}
+
+@media (min-width: 475px) and (max-width: 730px) {
+    #statsCard .heading{
+        font-size: 35px;
+    }
+
+    #statsCard.displayCard .statsSection {
+        font-size: 45px;
+    }
+
+    #statsCard.displayCard .statLabel {
+    }
+}
+
+@media (max-width: 475px) {
+    #statsCard .heading{
+        font-size: 30px;
+    }
+
+    #statsCard.displayCard .statsSection {
+        font-size: 45px;
+    }
+
+    #statsCard.displayCard .statLabel {
+    }
+}
+
+@media (max-width: 945px) {
+    #statsCard.displayCard .statsSection {
+        width: 70%;
+    }
+
+    #statsCard.displayCard .statBlock {
+        padding : 20px;
+        width: calc(100% - 40px);
+    }
+
+    #statsCard.displayCard .statDivider {
+        transform: rotate(90deg);
+    }
+
+    #statsCard.displayCard .statsSection {
+        gap: 0;
+    }
 }
